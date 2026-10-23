@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewel Junction | Fine Jewelry</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppin;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f3ec;
+    color: #241f1a;
+}
+
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    height: 76px;
+    padding: 0 8%;
+
+    background: rgba(35, 29, 23, .97);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #d7b56d;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo span {
+    display: block;
+    color: #f1e5cc;
+    font-size: 9px;
+    letter-spacing: 5px;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #d8d0c2;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: #d7b56d;
+}
+
+.shop-btn {
+    color: #241f1a;
+    background: #d7b56d;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.shop-btn:hover {
+    background: #ecd394;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 720px;
+    margin-top: 76px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 9%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(27, 22, 18, .94),
+            rgba(27, 22, 18, .72),
+            rgba(27, 22, 18, .2)
+        ),
+        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-tag,
+.section-tag {
+    color: #c39a4b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 82px;
+    line-height: .95;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero p:not(.hero-tag) {
+    color: #ddd3c4;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.main-btn,
+.small-btn {
+    display: inline-block;
+    color: #241f1a;
+    background: #d7b56d;
+    padding: 15px 24px;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.main-btn:hover,
+.small-btn:hover {
+    background: #ecd394;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 110px 9%;
+
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    background: #eee7da;
+}
+
+.about-image {
+    width: 48%;
+    height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(50, 39, 28, .2),
+            rgba(50, 39, 28, .3)
+        ),
+        url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.about-content {
+    width: 52%;
+}
+
+.about h2 {
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.about-content p:not(.section-tag) {
+    font-family: Arial, sans-serif;
+    color: #746b5e;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-content .small-btn {
+    margin-top: 15px;
+}
+
+
+/* COLLECTIONS */
+
+.collections {
+    padding: 110px 9%;
+    background: #f7f3ec;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 50px;
+    line-height: 1;
+}
+
+.collection-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.collection-card {
+    width: 25%;
+    height: 390px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+.collection-card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 30%,
+        rgba(20, 15, 10, .9)
+    );
+}
+
+.card-one {
+    background-image: url("https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80");
+    object-fit: cover;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.card-two {
+    background-image: url("https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80");
+    object-fit: cover;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.card-three {
+    background-image: url("https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80");
+    object-fit: cover;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.card-four {
+    background-image: url("https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80");
+    object-fit: cover;
+    transition: 1s;
+    border-radius: 10px;
+}
+.card-one:hover{
+    transform: scale(1.1);
+    box-shadow:0 20px 40px rgba(255,140,0,.3);
+}.card-two:hover{
+    transform: scale(1.1);
+    box-shadow:0 20px 40px rgba(255,140,0,.3);
+}.card-three:hover{
+    transform: scale(1.1);
+    box-shadow:0 20px 40px rgba(255,140,0,.3);
+}.card-four:hover{
+    transform: scale(1.1);
+    box-shadow:0 20px 40px rgba(255,140,0,.3);
+}
+
+.collection-card div {
+    position: relative;
+    z-index: 2;
+}
+
+.collection-card span {
+    color: #d7b56d;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.collection-card h3 {
+    color: white;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.collection-card p {
+    color: #ddd3c4;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* BLOG */
+
+.blog {
+    padding: 110px 9%;
+    background: #eee7da;
+}
+
+.blog-grid {
+    display: flex;
+    gap: 22px;
+}
+
+.blog-card {
+    width: 33.33%;
+
+    padding: 35px;
+
+    background: #f7f3ec;
+    border: 1px solid #d9cfbf;
+}
+
+.blog-card:hover {
+    border-color: #c39a4b;
+}
+
+.blog-card > span {
+    color: #b2873c;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.blog-card h3 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 20px 0 15px;
+}
+
+.blog-card p {
+    color: #786f63;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.blog-card a {
+    color: #a47b35;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 110px 9%;
+    background: #f7f3ec;
+}
+
+.contact-area {
+    display: flex;
+    gap: 80px;
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.contact-info > p {
+    color: #766d61;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.info {
+    margin-bottom: 22px;
+}
+
+.info span {
+    color: #b2873c;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.info p {
+    color: #625a50;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.contact-form {
+    width: 55%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #d8cebf;
+    background: #eee7da;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #b2873c;
+}
+
+.contact-form textarea {
+    height: 140px;
+    resize: none;
+}
+
+.contact-form button {
+    border: none;
+
+    background: #272019;
+    color: #f4ead9;
+
+    padding: 15px 25px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #b2873c;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 65px 9% 25px;
+    background: #201a15;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.footer-brand {
+    width: 40%;
+}
+
+.footer-brand h2 {
+    color: #d7b56d;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #918578;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    max-width: 280px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer-column h4 {
+    color: #d7b56d;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #918578;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.footer-column a:hover {
+    color: #d7b56d;
+}
+
+.footer-line {
+    height: 1px;
+    background: #40372e;
+    margin: 50px 0 22px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #6f6559;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.footer-bottom a:hover {
+    color: #d7b56d;
+}
+/* =========================
+   TABLET (1024px)
+========================= */
+
+@media (max-width:1024px){
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .about{
+        flex-direction:column;
+    }
+
+    .about-image,
+    .about-content{
+        width:100%;
+    }
+
+    .collection-grid{
+        flex-wrap:wrap;
+    }
+
+    .collection-card{
+        width:48%;
+    }
+
+    .blog-grid{
+        flex-wrap:wrap;
+    }
+
+    .blog-card{
+        width:48%;
+    }
+
+    .contact-area{
+        flex-direction:column;
+    }
+
+    .contact-info,
+    .contact-form{
+        width:100%;
+    }
+
+    .footer-main{
+        flex-wrap:wrap;
+    }
+}
+
+/*Tablet*/
+
+@media (max-width:768px){
+
+    .navbar{
+        padding:0 5%;
+        flex-direction:column;
+        height:auto;
+        padding-top:15px;
+        padding-bottom:15px;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero{
+        height:600px;
+        padding:0 5%;
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        max-width:100%;
+    }
+
+    .about{
+        padding:80px 5%;
+    }
+
+    .about h2{
+        font-size:36px;
+    }
+
+    .about-image{
+        height:350px;
+    }
+
+    .section-heading h2{
+        font-size:36px;
+    }
+
+    .collection-card{
+        width:100%;
+        height:350px;
+    }
+
+    .blog-card{
+        width:100%;
+    }
+
+    .contact{
+        padding:80px 5%;
+    }
+
+    .footer-main{
+        flex-direction:column;
+    }
+
+    .footer-brand{
+        width:100%;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+}
+
+/*Mobile*/
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero-tag,
+    .section-tag{
+        font-size:9px;
+        letter-spacing:2px;
+    }
+
+    .main-btn,
+    .small-btn{
+        padding:12px 18px;
+        font-size:10px;
+    }
+
+    .about h2,
+    .section-heading h2{
+        font-size:28px;
+    }
+
+    .contact-info h3{
+        font-size:22px;
+    }
+
+    .blog-card{
+        padding:25px;
+    }
+
+    .collection-card{
+        height:300px;
+    }
+}
+.menu-bar{
+    display:none;
+    font-size:30px;
+    color:#d7b56d;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .menu-bar{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
+</style>
+<header>
+    <section class="navbar">
+
+        <div class="logo">
+            JEWEL <span>JUNCTION</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#collections">Collections</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="#collections" class="shop-btn">
+            SHOP NOW
+        </a>
+
+    </section>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="hero-tag">
+            TIMELESS ELEGANCE
+        </p>
+
+        <h1>
+            JEWELRY<br>
+            THAT SHINES
+        </h1>
+
+        <p>
+            Discover beautifully crafted jewelry designed
+            to make every special moment unforgettable.
+        </p>
+
+        <a href="#collections" class="main-btn">
+            EXPLORE COLLECTION
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+        
+    </div>
+
+    <div class="about-content">
+
+        <p class="section-tag">
+            OUR STORY
+        </p>
+
+        <h2>
+            MADE TO BE<br>
+            REMEMBERED
+        </h2>
+
+        <p>
+            At Jewel Junction, we believe jewelry is more
+            than an accessory. It is a reflection of your
+            personality, your style and your most precious moments.
+        </p>
+
+        <p>
+            Every piece is selected with care to bring you
+            elegance, quality and timeless beauty.
+        </p>
+
+        <a href="#collections" class="small-btn">
+            DISCOVER MORE
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- COLLECTIONS -->
+
+<section class="collections" id="collections">
+
+    <div class="section-heading">
+
+        <p class="section-tag">
+            OUR COLLECTION
+        </p>
+
+        <h2>
+            FIND YOUR<br>
+            PERFECT PIECE
+        </h2>
+
+    </div>
+
+
+    <div class="collection-grid">
+
+        <div class="collection-card card-one">
+
+            <div>
+                <span>01</span>
+                <h3>NECKLACES</h3>
+                <p>Elegant pieces for every occasion.</p>
+            </div>
+
+        </div>
+
+
+        <div class="collection-card card-two">
+
+            <div>
+                <span>02</span>
+                <h3>RINGS</h3>
+                <p>Beautiful details that last forever.</p>
+            </div>
+
+        </div>
+
+
+        <div class="collection-card card-three">
+
+            <div>
+                <span>03</span>
+                <h3>BRACELETS</h3>
+                <p>Simple, elegant and unforgettable.</p>
+            </div>
+
+        </div>
+
+
+        <div class="collection-card card-four">
+
+            <div>
+                <span>04</span>
+                <h3>EARRINGS</h3>
+                <p>Add a touch of elegance to your look.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- BLOG -->
+
+<section class="blog" id="blog">
+
+    <div class="section-heading">
+
+        <p class="section-tag">
+            JEWELRY JOURNAL
+        </p>
+
+        <h2>
+            LATEST STORIES
+        </h2>
+
+    </div>
+
+
+    <div class="blog-grid">
+
+        <article class="blog-card">
+
+            <span>
+                STYLE
+            </span>
+
+            <h3>
+                HOW TO CHOOSE THE PERFECT JEWELRY
+            </h3>
+
+            <p>
+                Simple tips to help you find a piece
+                that matches your personal style.
+            </p>
+
+            <a href="#">
+                READ ARTICLE →
+            </a>
+
+        </article>
+
+
+        <article class="blog-card">
+
+            <span>
+                GUIDE
+            </span>
+
+            <h3>
+                CARING FOR YOUR JEWELRY
+            </h3>
+
+            <p>
+                Learn simple ways to keep your
+                favorite pieces looking beautiful.
+            </p>
+
+            <a href="#">
+                READ ARTICLE →
+            </a>
+
+        </article>
+
+
+        <article class="blog-card">
+
+            <span>
+                INSPIRATION
+            </span>
+
+            <h3>
+                JEWELRY FOR EVERY MOMENT
+            </h3>
+
+            <p>
+                From everyday elegance to special
+                celebrations, find your perfect piece.
+            </p>
+
+            <a href="#">
+                READ ARTICLE →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+
+        <p class="section-tag">
+            GET IN TOUCH
+        </p>
+
+        <h2>
+            VISIT JEWEL<br>
+            JUNCTION
+        </h2>
+
+    </div>
+
+
+    <div class="contact-area">
+
+        <div class="contact-info">
+
+            <h3>
+                LET'S TALK JEWELRY
+            </h3>
+
+            <p>
+                Have a question about a piece or
+                looking for the perfect gift?
+                We'd love to hear from you.
+            </p>
+
+
+            <div class="info">
+
+                <span>EMAIL</span>
+
+                <p>
+                    jeweljunction@gmail.com
+                </p>
+
+            </div>
+
+
+            <div class="info">
+
+                <span>PHONE</span>
+
+                <p>
+                    +92 3123752634
+                </p>
+
+            </div>
+
+
+            <div class="info">
+
+                <span>STORE</span>
+
+                <p>
+                    Located at the Mehran Walk
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form class="contact-form">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+            >
+
+            <input
+                type="text"
+                placeholder="Subject"
+            >
+
+            <textarea
+                placeholder="Your Message"
+            ></textarea>
+
+            <button type="submit">
+                SEND MESSAGE
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <h2>
+                JEWEL<br>
+                JUNCTION
+            </h2>
+
+            <p>
+                Timeless jewelry for timeless moments.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                EXPLORE
+            </h4>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#collections">Collections</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                INFORMATION
+            </h4>
+
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Shipping</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                FOLLOW US
+            </h4>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Jewel Junction. All rights reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
+<div class="menu-bar" id="menuBar">
+    ☰
+</div>
+
+<div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Collections</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
+</div>
+<script src="3Web.js"></script>
+</body>
+</html>
